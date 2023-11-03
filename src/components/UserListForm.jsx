@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ToDoItem from "./ToDoItem";
 
 function UserListForm() {
   const [Note, setNote] = useState("");
@@ -35,7 +36,9 @@ function UserListForm() {
                 {
                     Notes.map((note) => {
                         return(
-                            <li>{note}</li>
+                            <ToDoItem
+                                text = {note} 
+                            />
                         );
                     })
                 }
